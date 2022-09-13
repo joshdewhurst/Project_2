@@ -40,6 +40,7 @@ ___
 1. Create Models for encounters, partners, and find an sexual health api
 2. Create all routes that run and direct the user around the app
 3. Utalize the health api to get information on diseases and how they are treated
+4. Have a working app
 
 ## Stetch 
 1. Create a calendar that displays all of the health information
