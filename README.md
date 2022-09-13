@@ -18,10 +18,19 @@ ___
  GET | /partners | Read | Get a list of all current partners
  Get | /partners/new | Read | Showing a form to log a new partner
  POST | /partners | Create | Creating a new partner 
- GET | partners/:id | Read | Show a specific partner
- GET | partners/edit/:id | Read | Show a form to edit partner information
- PUT | partners/:id | Update | Updating a current partners information
+ GET | /partners/:id | Read | Show a specific partner
+ GET | /partners/edit/:id | Read | Show a form to edit partner information
+ PUT | /partners/:id | Update | Updating a current partners information
  DELETE | /partners/:id | Delete | Deleting a specific partners data 
+ GET | /sexualhealth | Read | Get a list of STDs/STIs
+ GET | /sexualhealth/:id | READ | Get details for a specific STD/STI
+ 
+ ___
+ # User Stories
+ 
+ 1. As a user you should be able to log new encounters and edit/delete them 
+ 2. As a user you should be able to log new partners and edit/delete them 
+ 3. You don't need to be a user to access the STD FAQs
  
  ___
  
@@ -46,6 +55,7 @@ ___
 ## Stetch 
 1. Create a calendar that displays all of the health information
 2. Style the pages to make them look aesthetically pleasing
+3. Create a more complex note sextion to add additional optional information prompts for encounters/partners
  
  
  
