@@ -26,10 +26,24 @@ ___
  
  # Wire Frame
  
- ![WireFrame](https://ibb.co/DLvpqd2)
+ ![WireFrame](https://user-images.githubusercontent.com/108956371/189952088-fca97aa7-b94b-4c95-afeb-41ad57029347.jpg)
+
  
  ___
  
  # ERD
+ ![Screen Shot 2022-09-13 at 9 09 07 AM](https://user-images.githubusercontent.com/108956371/189952273-4bf0fa09-b72e-4368-8af6-c578ff034819.png)
+
+___
+
+# MVP 
+1. Create Models for encounters, partners, and find an sexual health api
+2. Create all routes that run and direct the user around the app
+3. Utalize the health api to get information on diseases and how they are treated
+
+## Stetch 
+1. Create a calendar that displays all of the health information
+2. Style the pages to make them look aesthetically pleasing
+ 
  
  
