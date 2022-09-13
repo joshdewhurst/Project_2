@@ -22,3 +22,14 @@ ___
  PUT | partners/:id | Update | Updating a current partners information
  DELETE | /partners/:id | Delete | Deleting a specific partners data 
  
+ ___
+ 
+ # Wire Frame
+ 
+ ![WireFrame](https://ibb.co/DLvpqd2)
+ 
+ ___
+ 
+ # ERD
+ 
+ 
