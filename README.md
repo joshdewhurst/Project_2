@@ -8,5 +8,17 @@ ___
  VERB | URL | Action | Notes
  ----| --- | ------- | -----
  GET | /encounters | Read | Get a list of all current encounters
- --- | --- | --- | ----
+ GET | /encounters/new | Read | Showing a form that will create a new encounter
+ POST | /encounters | Create | creating a new encounter
+ GET | /encounters/:id | Read | Get a specific encounter
+ GET | /encounters/edit/:id | Read | Get a form that allows you to edit a previously made encounter
+ PUT | /encounters/:id | Update | Editing an encounter and posting the edits
+ DELETE | /encounters/:id | Delete | Delete an encounter
+ GET | /partners | Read | Get a list of all current partners
+ Get | /partners/new | Read | Showing a form to log a new partner
+ POST | /partners | Create | Creating a new partner 
+ GET | partners/:id | Read | Show a specific partner
+ GET | partners/edit/:id | Read | Show a form to edit partner information
+ PUT | partners/:id | Update | Updating a current partners information
+ DELETE | /partners/:id | Delete | Deleting a specific partners data 
  
