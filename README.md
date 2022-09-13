@@ -42,7 +42,8 @@ ___
  ___
  
  # ERD
- ![Screen Shot 2022-09-13 at 9 09 07 AM](https://user-images.githubusercontent.com/108956371/189952273-4bf0fa09-b72e-4368-8af6-c578ff034819.png)
+![Screen Shot 2022-09-13 at 9 27 06 AM](https://user-images.githubusercontent.com/108956371/189956027-32ad2221-39eb-4795-bd5f-8739c1d06109.png)
+
 
 ___
 
