@@ -33,7 +33,34 @@ router.post('/', async (req, res) => {
     })
 })
 
+// Getting an encounters's information
+router.get('/:id', (req, res) => {
+    db.encounter.findOne({
+      where: { id: req.params.id }
+    })
+    .then((encounter) => {
+      if (!encounter) throw Error()
+      res.render('encounters/show.ejs', { encounter: encounter })
+    })
+    .catch((error) => {
+      res.send('server error')
+    })
+  })
 
+
+//   deleting an encounter
+router.delete('/:id', async (req, res) => {
+    try {
+        console.log(req.body)
+        await db.encounter.destroy({
+            where: { id: req.params.id }
+        })
+        res.redirect('/encounters')
+    } catch(err) {
+        console.warn(err)
+        res.send(`server error!`)
+    }
+})
 
 
 

@@ -1,0 +1,12 @@
+<h1><%= encounter.date %></h1>
+
+<h2>Notes</h2>
+<h3>
+ <%= encounter.note %>
+</h3>
+
+<p><%= encounter.partnerId %> </p>
+
+<form method="POST" action ="/encounters/<%=encounter.id%>/?_method=DELETE">
+    <input type="submit" value="delete">
+</form>
