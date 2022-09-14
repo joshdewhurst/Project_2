@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
+const methodOverride = require('method-override')
 
 // GET /users/new -- render a form to create a new user
 
@@ -34,7 +35,33 @@ router.post('/', (req, res) => {
     })
 })
 
+// Getting a partner's information
+router.get('/:id', (req, res) => {
+    db.partner.findOne({
+      where: { id: req.params.id }
+    })
+    .then((partner) => {
+      if (!partner) throw Error()
+      res.render('partners/show.ejs', { partner: partner })
+    })
+    .catch((error) => {
+      res.send('server error')
+    })
+  })
 
 
+//   deleting a partner 
+router.delete('/:id', async (req, res) => {
+    try {
+        console.log(req.body)
+        await db.partner.destroy({
+            where: { id: req.params.id }
+        })
+        res.redirect('/partners')
+    } catch(err) {
+        console.warn(err)
+        res.send(`server error!`)
+    }
+})
 
 module.exports = router

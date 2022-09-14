@@ -1,0 +1,10 @@
+<h1><%= partner.name %></h1>
+
+<h2>Notes</h2>
+<h3>
+ <%= partner.note %>
+</h3>
+
+<form method="POST" action ="/partners/<%=partner.id%>/?_method=DELETE">
+    <input type="submit" value="delete">
+</form>

@@ -5,6 +5,7 @@ const ejsLayouts = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
 const db = require('./models')
 const crypto = require('crypto-js')
+const methodOverride = require('method-override')
 const axios = require('axios')
 const url = 'https://ghoapi.azureedge.net/api/Dimension'
 
@@ -15,6 +16,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 // our custom auth middleware
