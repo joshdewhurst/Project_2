@@ -8,7 +8,7 @@
         <a href="/encounters/<%= encounter.id %>"><%= encounter.date %></a>
         <p><%= encounter.note %></p>
       </h2>
-      <a href="/encounters/edit/<%= idx %>"> Edit </a>
+      <a href="/encounters/edit/<%= encounter.id %>"> Edit </a>
     </div>
     <% console.log(encounter.date) %>
   <% }); %>

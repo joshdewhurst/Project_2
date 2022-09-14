@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
         note: req.body.note
     })
     .then((partner) => {
-        res.redirect('/')
+        res.redirect('/partners')
     })
     .catch((err) => {
         console.warn(err)
@@ -49,6 +49,34 @@ router.get('/:id', (req, res) => {
     })
   })
 
+// select a partner to edit
+router.get('/edit/:id', (req,res) => {
+    db.partner.findOne({
+        where: { id: req.params.id }
+    })
+    .then((partner) => {
+        res.render('partners/edit', {
+            partner: partner,
+            id: req.params.id
+        })
+    })
+})
+
+// posting the edits
+router.put('/:id', async (req, res) => {
+    try {
+        const changedPartner = await db.partner.update({
+            name: req.body.name,
+            note: req.body.note,
+        }, {where: {
+            id: req.params.id
+        }})
+    res.redirect('/partners')
+    } catch (err) {
+        console.log(err)
+        res.send('server error')
+    }
+})
 
 //   deleting a partner 
 router.delete('/:id', async (req, res) => {

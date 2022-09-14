@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
     })
 })
 
+// Getting to the new encounter form
 router.get('/new', (req, res) => {
     res.render('encounters/new.ejs')
 })
@@ -60,6 +61,7 @@ router.get('/edit/:id', (req,res) => {
     })
 })
 
+// posting the edits
 router.put('/:id', async (req, res) => {
     try {
         const changedEncounter = await db.encounter.update({
