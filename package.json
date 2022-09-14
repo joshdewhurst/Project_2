@@ -1,0 +1,29 @@
+{
+  "name": "project_2",
+  "version": "1.0.0",
+  "description": "## Sexual Health Tracking App ### I am thinking of creating an app to track sexual health, possible exposures, and sexual partners. The app will load on a main page prompting log in authentication in order to authorize the use of the app. Once logged in, a monthly calendar will be the main display item. You will have the options to add an encounter, add a new partner, or request information on a STD/STI. 1. The goal of the app is to have your sexual health in an easy to access app that stores information on when an encounter happened and with who in the case you have been exposed to a disease and need to inform people you have been with and be responsible and practice safer sex practices. 2. Health.gov API to pull information about symptons, treatment, and information on STDs. 3. [Health.gov API](https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers) ___  # CRUD Table  VERB | URL | Action | Notes  ----| --- | ------- | -----  GET | /encounters | Read | Get a list of all current encounters  GET | /encounters/new | Read | Showing a form that will create a new encounter  POST | /encounters | Create | creating a new encounter  GET | /encounters/:id | Read | Get a specific encounter  GET | /encounters/edit/:id | Read | Get a form that allows you to edit a previously made encounter  PUT | /encounters/:id | Update | Editing an encounter and posting the edits  DELETE | /encounters/:id | Delete | Delete an encounter  GET | /partners | Read | Get a list of all current partners  Get | /partners/new | Read | Showing a form to log a new partner  POST | /partners | Create | Creating a new partner   GET | /partners/:id | Read | Show a specific partner  GET | /partners/edit/:id | Read | Show a form to edit partner information  PUT | /partners/:id | Update | Updating a current partners information  DELETE | /partners/:id | Delete | Deleting a specific partners data   GET | /sexualhealth | Read | Get a list of STDs/STIs  GET | /sexualhealth/:id | READ | Get details for a specific STD/STI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshdewhurst/Project_2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshdewhurst/Project_2/issues"
+  },
+  "homepage": "https://github.com/joshdewhurst/Project_2#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "crypto-js": "^4.1.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}

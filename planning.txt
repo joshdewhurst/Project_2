@@ -1,0 +1,63 @@
+Planning Out my Sexual Health Tracking App
+
+Create models for User, Encounters, and Partners:
+
+User
+----
+name: string
+email: string
+password: string 
+
+sequelize model:create --name user --attributes email:string,password:string
+
+Encounter
+----------
+date: date
+note: string
+partnerId: integer
+userId: integer
+
+sequelize model:create --name encounter --attributes date:dateonly,note:string,partnerId:integer,userId:integer
+
+Partner
+--------
+name: string
+note: string
+userId: integer
+
+sequelize model:create --name partner --attributes name:string,note:string,userId:integer
+
+Create CRUD routes for creating a new partner and a new encounter
+GET:
+/encounters
+/encounters/new
+/encounters/:id
+/encounters/edit/:id
+/partners
+/partners/new
+/partners/:id
+/partners/edit/:id
+POST:
+/encounters
+/partners
+PUT:
+/encounter/:id
+/partners/:id 
+DELETE:
+/encounter/:id
+/partners/:id
+
+Utalizing the Health.gov api to show information on popular stds
+1. Chlamydia
+2. Genital herpes
+3. Gonorrhea
+4. HIV/AIDS
+5. HPV
+6. Pubic lice
+7. Syphilis
+8. Trichomoniasis
+
+This will utalize axios and be able to get and post data onto a /sexualhealthfaq page
+
+/sexualhealthfaq will have seperate ids with clickable links for each of the entries
+example: /sexualhealthfaq/hiv 
