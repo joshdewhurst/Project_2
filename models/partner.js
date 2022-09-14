@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.partner.belongsTo(models.user)
-      models.partner.hasMany(models.encounter)
+      models.partner.belongsToMany(models.encounter, { through: "partners_encounters"})
     }
   }
   partner.init({

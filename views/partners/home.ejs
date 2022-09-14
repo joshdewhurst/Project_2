@@ -1,2 +1,11 @@
 <h2>All Partners</h2>
 <a href="./partners/new">New Partner</a>
+
+<% partners.forEach(function(partner, idx) { %>
+    <div>
+      <h2>
+        <a href="/partners/<%= partner.id %>"><%= partner.name %></a>
+      </h2>
+      <a href="/partners/edit/<%= idx %>"> Edit </a>
+    </div>
+  <% }); %>

@@ -28,6 +28,14 @@ userId: integer
 
 sequelize model:create --name partner --attributes name:string,note:string,userId:integer
 
+Partners_encounters
+---------------------
+FK: partnerId: INT
+FK: encounterId: INT
+
+sequelize model:create --name partners_encounters --attributes partnerId:integer,encounterId:integer
+
+
 Create CRUD routes for creating a new partner and a new encounter
 GET:
 /encounters
