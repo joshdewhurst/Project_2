@@ -47,6 +47,35 @@ router.get('/:id', (req, res) => {
     })
   })
 
+//   editting an encounter
+router.get('/edit/:id', (req,res) => {
+    db.encounter.findOne({
+        where: { id: req.params.id }
+    })
+    .then((encounter) => {
+        res.render('encounters/edit', {
+            encounter: encounter,
+            id: req.params.id
+        })
+    })
+})
+
+router.put('/:id', async (req, res) => {
+    try {
+        const changedEncounter = await db.encounter.update({
+            date: req.body.date,
+            note: req.body.note,
+            partnerId: req.body.partnerId
+        }, {where: {
+            id: req.params.id
+        }})
+    res.redirect('/encounters')
+    } catch (err) {
+        console.log(err)
+        res.send('server error')
+    }
+})
+
 
 //   deleting an encounter
 router.delete('/:id', async (req, res) => {

@@ -1,0 +1,10 @@
+<form method="POST", action='/encounters/<%= id %>/?_method=PUT'>
+    <label>Date</label>
+    <input type="date" name="name" value="<%= encounter.date %>" required>
+    <label>Notes</label>
+    <input type="text" name="note" value="<%= encounter.note %>" placeholder="Add a note to this encounter">
+    <label>Partner Id</label>
+    <input type="integer" name="partnerId" 
+    value="<%= encounter.partnerId %>" required>
+    <input type="submit">
+</form>
