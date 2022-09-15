@@ -7,6 +7,7 @@ const app = require('express')
 const syphilisUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=syphilis`
 const chlamGonoUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=gonorrhea`
 const hivUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=hiv`
+const talkUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=STD%20Testing`
 
 
 
@@ -50,6 +51,15 @@ router.get('/hiv', (req, res) => {
             dataPoint7: response.data.Result.Resources.Resource[0].Sections.section[6].Content
         })
 })
+})
+
+router.get('/letstalk', (req, res) => {
+    axios.get(talkUrl)
+    .then((response) => {
+        res.render('./sexualhealth/letstalk', {
+            data: response.data.Result.Resources.Resource[0].Sections.section[0].Content
+        })
+    })
 })
 
 module.exports = router
