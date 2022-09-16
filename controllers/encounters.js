@@ -10,6 +10,9 @@ router.get('/', async (req, res) => {
             res.redirect('/')
         } else {
             db.encounter.findAll({
+                where: {
+                    userId: res.locals.user.id
+                },
                 include: [db.user]
             })
             .then((encounters) => {

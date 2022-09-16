@@ -5,34 +5,50 @@ const methodOverride = require('method-override')
 
 // GET /users/new -- render a form to create a new user
 
-router.get('/', (req, res) => {
-    db.partner.findAll()
-    .then((partners) => {
-      res.render('./partners/home.ejs', { partners: partners })
-    })
-    .catch((error) => {
+router.get('/', async (req, res) => {
+    try {
+        if (!res.locals.user) {
+            res.redirect('/')
+        } else {
+            db.partner.findAll({
+                include: [db.user]
+            })
+            .then((partners) => {
+              res.render('./partners/home.ejs', { partners: partners })
+            })
+        }
+} catch(error) {
       console.log('Error in GET /', error)
-    })
-})
+      res.send('server error')
+    }
+} )
 
 
 // Creating a new Partner
 router.get('/new', (req, res) => {
-    res.render('partners/new.ejs')
+    if (!res.locals.user) {
+        res.redirect('/')
+    } else {res.render('partners/new.ejs')
+}
 })
 
 // Posting that new Partner
-router.post('/', (req, res) => {
-    db.partner.create({
+router.post('/', async (req, res) => {
+    try {
+        if (!res.locals.user) {
+            res.redirect('/')
+        } else {
+            await db.partner.create({
         name: req.body.name,
-        note: req.body.note
+        note: req.body.note,
+        userId: res.locals.user.id
     })
     .then((partner) => {
         res.redirect('/partners')
-    })
-    .catch((err) => {
+    })}}
+    catch(err) {
         console.warn(err)
-    })
+}
 })
 
 // Getting a partner's information

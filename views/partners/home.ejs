@@ -1,11 +1,24 @@
 <h2>All Partners</h2>
 <a href="./partners/new">New Partner</a>
 
-<% partners.forEach(function(partner, idx) { %>
-    <div>
-      <h2>
-        <a href="/partners/<%= partner.id %>"><%= partner.name %></a>
-      </h2>
-      <a href="/partners/edit/<%= partner.id %>"> Edit </a>
-    </div>
-  <% }); %>
+
+  <table class="table table-striped">
+    <thead>
+      <% for (let i=0; i < partners.length; i++) { %>
+        <% if(user) { %>
+          <% partners.forEach(partner => { %>
+            <tr>
+              <th scope="col">
+                <a href="/partners/<%= partner.id %>"><%= partner.name %></a>
+              </th>
+              <th>
+                <p><%= partner.note %></p>
+              </th>
+              <th>
+                <a href="/partners/edit/<%= partner.id %>"> Edit </a>
+              </th>
+            </tr>)
+      <%  } )}} %>
+    </thead>
+  </table>
+
