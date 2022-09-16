@@ -5,7 +5,6 @@
 
     <table class="table table-striped">
       <thead>
-        <% for (let i=0; i < encounters.length; i++) { %>
           <% if(user) { %>
             <% encounters.forEach(encounter => { %>
               <tr>
@@ -18,8 +17,8 @@
                 <th>
                   <a href="/encounters/edit/<%= encounter.id %>"> Edit </a>
                 </th>
-              </tr>)
-        <%  } )}} %>
+              </tr>
+        <%  } )}%>
       </thead>
     </table>
 

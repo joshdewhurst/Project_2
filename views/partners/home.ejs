@@ -1,10 +1,10 @@
 <h2>All Partners</h2>
 <a href="./partners/new">New Partner</a>
 
+<% console.log(partners) %>
 
   <table class="table table-striped">
     <thead>
-      <% for (let i=0; i < partners.length; i++) { %>
         <% if(user) { %>
           <% partners.forEach(partner => { %>
             <tr>
@@ -17,8 +17,8 @@
               <th>
                 <a href="/partners/edit/<%= partner.id %>"> Edit </a>
               </th>
-            </tr>)
-      <%  } )}} %>
+            </tr>
+      <%  } )}%>
     </thead>
   </table>
 

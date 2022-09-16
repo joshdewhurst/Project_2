@@ -11,6 +11,9 @@ router.get('/', async (req, res) => {
             res.redirect('/')
         } else {
             db.partner.findAll({
+                where: {
+                    userId: res.locals.user.id
+                },
                 include: [db.user]
             })
             .then((partners) => {
