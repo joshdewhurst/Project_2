@@ -2,13 +2,15 @@
 
 <a href="./encounters/new">New Encounter</a>
 
-<% encounters.forEach(function(encounter, idx) { %>
-    <div>
-      <h2>
-        <a href="/encounters/<%= encounter.id %>"><%= encounter.date %></a>
-        <p><%= encounter.note %></p>
-      </h2>
-      <a href="/encounters/edit/<%= encounter.id %>"> Edit </a>
-    </div>
-    <% console.log(encounter.date) %>
-  <% }); %>
+<% console.log(encounters) %>
+
+<% if(user) { %>
+  <% encounters.forEach(encounter => { %>
+      <div>
+        <h2>
+          <a href="/encounters/<%= encounter.id %>"><%= encounter.date %></a>
+          <p><%= encounter.note %></p>
+        </h2>
+        <a href="/encounters/edit/<%= encounter.id %>"> Edit </a>
+      </div>
+    <% })}; %>

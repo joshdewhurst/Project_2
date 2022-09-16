@@ -4,54 +4,76 @@ const db = require('../models')
 
 // GET /users/new -- render a form to create a new user
 
-router.get('/', (req, res) => {
-    db.encounter.findAll()
-    .then((encounters) => {
-      res.render('./encounters/home.ejs', { encounters: encounters })
-    })
-    .catch((error) => {
+router.get('/', async (req, res) => {
+    try {
+        if (!res.locals.user) {
+            res.redirect('/')
+        } else {
+            db.encounter.findAll({
+                include: [db.user]
+            })
+            .then((encounters) => {
+              res.render('./encounters/home.ejs', { encounters: encounters })
+            })
+        }
+} catch(error) {
       console.log('Error in GET /', error)
-    })
+      res.send('server error')
+    }
 })
 
 // Getting to the new encounter form
 router.get('/new', (req, res) => {
-    res.render('encounters/new.ejs')
-})
+    if (!res.locals.user) {
+        res.redirect('/')
+    } else {
+        res.render('encounters/new.ejs')
+}})
 
 // Posting that new encounter
 router.post('/', async (req, res) => {
-    await db.encounter.create({
+    try {
+        if (!res.locals.user) {
+            res.redirect('/')
+        } else {
+        await db.encounter.create({
         date: req.body.date,
         note: req.body.note,
-        partnerId: req.body.partnerId
+        partnerId: req.body.partnerId,
+        userId: res.locals.user.id
     })
     .then((encounter) => {
         res.redirect('/encounters')
-    })
-    .catch((err) => {
+    })}
+}
+catch(err) {
         console.warn(err)
-    })
+    }
 })
 
 // Getting an encounters's information
-router.get('/:id', (req, res) => {
-    db.encounter.findOne({
-      where: { id: req.params.id }
-    })
-    .then((encounter) => {
-      if (!encounter) throw Error()
-      res.render('encounters/show.ejs', { encounter: encounter })
-    })
-    .catch((error) => {
+router.get('/:id', async (req, res) => {
+    try {
+        const encounter = db.encounter.findOne({
+            where: { id: req.params.id },
+            include: [db.user]
+          })
+          .then((encounter) => {
+            if (!encounter) throw Error()
+            res.render('encounters/show.ejs', { encounter: encounter })
+          })
+    }
+    catch(error) {
       res.send('server error')
-    })
+    }
   })
 
 //   editting an encounter
-router.get('/edit/:id', (req,res) => {
-    db.encounter.findOne({
-        where: { id: req.params.id }
+router.get('/edit/:id', async (req,res) => {
+    try { 
+        const encounter = db.encounter.findOne({
+        where: { id: req.params.id },
+        include: [db.user]
     })
     .then((encounter) => {
         res.render('encounters/edit', {
@@ -59,6 +81,9 @@ router.get('/edit/:id', (req,res) => {
             id: req.params.id
         })
     })
+} catch (error) {
+    res.send('server error')
+}
 })
 
 // posting the edits
