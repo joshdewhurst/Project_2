@@ -1,4 +1,5 @@
 const express = require('express')
+const { CommandCompleteMessage } = require('pg-protocol/dist/messages')
 const router = express.Router()
 const db = require('../models')
 
@@ -11,7 +12,8 @@ router.get('/', async (req, res) => {
         } else {
             db.encounter.findAll({
                 where: {
-                    userId: res.locals.user.id
+                    userId: res.locals.user.id,
+                    
                 },
                 include: [db.user]
             })
@@ -26,12 +28,22 @@ router.get('/', async (req, res) => {
 })
 
 // Getting to the new encounter form
-router.get('/new', (req, res) => {
-    if (!res.locals.user) {
-        res.redirect('/')
-    } else {
-        res.render('encounters/new.ejs')
-}})
+// router.get('/new', (req, res) => {
+//     if (!res.locals.user) {
+//         res.redirect('/')
+//     } else {
+//         res.render('encounters/new.ejs')
+// }})
+
+router.get('/new', (req,res)=> {
+    db.partner.findAll()
+    .then(function(partner) {
+        res.render('encounters/new.ejs', {
+            partner: partner
+        })
+    })
+})
+
 
 // Posting that new encounter
 router.post('/', async (req, res) => {
