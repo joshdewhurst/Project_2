@@ -60,7 +60,8 @@ router.post('/', async (req, res) => {
         note: req.body.note,
         partnerName: req.body.partnerName,
         userId: res.locals.user.id,
-        protection: req.body.protection
+        protection: req.body.protection,
+        penetration: req.body.penetration
     })
     .then((encounter) => {
         res.redirect('/encounters')
