@@ -1,22 +1,32 @@
-<h2>All Partners</h2>
-<a href="./partners/new">New Partner</a>
-
-  <table class="table table-striped">
-    <thead>
-        <% if(user) { %>
-          <% partners.forEach(partner => { %>
-            <tr>
-              <th scope="col">
-                <a href="/partners/<%= partner.id %>"><%= partner.name %></a>
-              </th>
-              <th>
-                <p><%= partner.note %></p>
-              </th>
-              <th>
-                <a href="/partners/edit/<%= partner.id %>"> Edit </a>
-              </th>
-            </tr>
-      <%  } )}%>
-    </thead>
-  </table>
-
+<div>
+  <h2>All Partners</h2>
+  <div class="profile"">
+    <table class="table" id="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% if(user) { %>
+            <% partners.forEach(partner => { %>
+              <tr>
+                <th scope="col">
+                  <a href="/partners/<%= partner.id %>"><%= partner.name %></a>
+                </th>
+                <th>
+                  <p><%= partner.note %></p>
+                </th>
+                <th>
+                  <a href="/partners/edit/<%= partner.id %>"> Edit </a>
+                </th>
+              </tr>
+        <%  } )}%>
+      </tbody>
+    </table>
+  </div>
+  
+  <a href="./encounters/new" class="btn btn-outline-dark">New Partner</a>
+</div>
