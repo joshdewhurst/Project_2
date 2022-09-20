@@ -23,6 +23,12 @@ module.exports = {
       partnerId: {
         type: Sequelize.INTEGER
       },
+      protection: {
+        type: Sequelize.STRING
+      },
+      penetration: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -20,7 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     note: DataTypes.STRING,
     partnerName: DataTypes.STRING,
     userId: DataTypes.INTEGER,
-    partnerId: DataTypes.INTEGER
+    partnerId: DataTypes.INTEGER,
+    protection: DataTypes.STRING,
+    penetration: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'encounter',

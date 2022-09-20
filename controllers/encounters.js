@@ -59,7 +59,8 @@ router.post('/', async (req, res) => {
         date: req.body.date,
         note: req.body.note,
         partnerName: req.body.partnerName,
-        userId: res.locals.user.id
+        userId: res.locals.user.id,
+        protection: req.body.protection
     })
     .then((encounter) => {
         res.redirect('/encounters')
