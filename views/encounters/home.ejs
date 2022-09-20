@@ -1,24 +1,33 @@
-<h2>All Encounters</h2>
+<div>
+  <h2>All Encounters</h2>
 
-<a href="./encounters/new" class="btn btn-outline-dark">New Encounter</a>
-
-
-    <table class="table table-striped">
-      <thead>
-          <% if(user) { %>
-            <% encounters.forEach(encounter => { %>
-              <tr>
-                <th scope="col">
-                  <a href="/encounters/<%= encounter.id %>"><%= encounter.date %></a>
-                </th>
-                <th>
-                  <p><%= encounter.note %></p>
-                </th>
-                <th>
-                  <a href="/encounters/edit/<%= encounter.id %>"> Edit </a>
-                </th>
-              </tr>
-        <%  } )}%>
-      </thead>
-    </table>
+  <a href="./encounters/new" class="btn btn-outline-dark">New Encounter</a>
+  
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Partner Name</th>
+            <th scope="col">Edit Encounter</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% if(user) { %>
+              <% encounters.forEach(encounter => { %>
+                <tr>
+                  <th scope="col">
+                    <a href="/encounters/<%= encounter.id %>"><%= encounter.date %></a>
+                  </th>
+                  <th>
+                    <p><%= encounter.partnerName %></p>
+                  </th>
+                  <th>
+                    <a href="/encounters/edit/<%= encounter.id %>"> Edit </a>
+                  </th>
+                </tr>
+          <%  } )}%>
+        </tbody>
+      </table>
+</div>
 

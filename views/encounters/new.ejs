@@ -11,19 +11,16 @@
         <input type="text" id="note" name="note">
     </div> 
     <div>
-        <label for="partner">Partner</label>
-        <select name="partner.name">
-            <% partner.forEach((partner) => { %>
-                <option value ="partner.name">
+        <label for="partnerName">Partner</label>
+        <select name="partnerName">
+            <% partners.forEach((partner) => { %>
+                <option>
                     <%= partner.name %>
                 </option>
-                <input type="hidden" id="note" name="partnerId" value="partner.id" >
-            <%  }) %>
-            <div>
-            </div> 
-          </select>
-    </div> 
+           <% }) %>
+        </select>
+        <a href="../partners/new" class="link-dark">Create a New Partner</a>
+    </div>
     <input type="submit">
 
 </form>
-

@@ -18,8 +18,9 @@ module.exports = (sequelize, DataTypes) => {
   encounter.init({
     date: DataTypes.STRING,
     note: DataTypes.STRING,
-    partnerId: DataTypes.INTEGER,
-    userId: DataTypes.INTEGER
+    partnerName: DataTypes.STRING,
+    userId: DataTypes.INTEGER,
+    partnerId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'encounter',

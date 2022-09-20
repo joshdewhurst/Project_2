@@ -18,7 +18,7 @@ note: string
 partnerId: integer
 userId: integer
 
-sequelize model:create --name encounter --attributes date:dateonly,note:string,partnerId:integer,userId:integer
+sequelize model:create --name encounter --attributes date:string,note:string,partnerName:string,userId:integer
 
 Partner
 --------

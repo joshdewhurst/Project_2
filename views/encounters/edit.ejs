@@ -1,10 +1,21 @@
-<form method="POST", action='/encounters/<%= id %>/?_method=PUT'>
-    <label>Date</label>
-    <input type="date" name="date" value="<%= encounter.date %>" required>
-    <label>Notes</label>
-    <input type="text" name="note" value="<%= encounter.note %>" placeholder="Add a note to this encounter">
-    <label>Partner Id</label>
-    <input type="integer" name="partnerId" 
-    value="<%= encounter.partnerId %>" required>
-    <input type="submit">
-</form>
+<div class="profile">
+    <form method="POST", action='/encounters/<%= id %>/?_method=PUT'>
+        <div>
+            <label>Date</label>
+            <input type="date" name="date" value="<%= encounter.date %>" required>
+        </div>
+        <div>
+            <label>Notes</label>
+            <input type="text" name="note" value="<%= encounter.note %>" placeholder="Add a note to this encounter"> 
+        </div>
+        <div>
+            <label>Partner:</label>
+            <input type="text" name="partnerName" 
+            value="<%= encounter.partnerName %>" required>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    <a href="/encounters">Go Back to All Encounters</a>
+</div>

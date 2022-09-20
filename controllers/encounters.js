@@ -41,9 +41,9 @@ router.get('/new', (req,res)=> {
             userId: res.locals.user.id
         }, include: [db.user]
     })
-    .then(function(partner) {
+    .then(function(partners) {
         res.render('encounters/new.ejs', {
-            partner: partner
+            partners: partners
         })
     })
 })
@@ -58,7 +58,7 @@ router.post('/', async (req, res) => {
         await db.encounter.create({
         date: req.body.date,
         note: req.body.note,
-        partnerId: req.body.partner.id,
+        partnerName: req.body.partnerName,
         userId: res.locals.user.id
     })
     .then((encounter) => {
@@ -79,7 +79,9 @@ router.get('/:id', async (req, res) => {
           })
           .then((encounter) => {
             if (!encounter) throw Error()
-            res.render('encounters/show.ejs', { encounter: encounter })
+            res.render('encounters/show.ejs', { 
+                encounter: encounter
+         })
           })
     }
     catch(error) {
@@ -111,7 +113,7 @@ router.put('/:id', async (req, res) => {
         const changedEncounter = await db.encounter.update({
             date: req.body.date,
             note: req.body.note,
-            partnerId: req.body.partnerId
+            partnerName: req.body.partnerName
         }, {where: {
             id: req.params.id
         }})

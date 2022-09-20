@@ -1,14 +1,24 @@
-<h1><%= encounter.date %></h1>
+<div>
+    <h2>Encounter on <%= encounter.date %></h2>
 
-<h2>Notes</h2>
-<h3>
- <%= encounter.note %>
-</h3>
 
-<p><%= encounter.partnerId %> </p>
-
-<form method="POST" action ="/encounters/<%=encounter.id%>/?_method=DELETE">
-    <input type="submit" value="delete">
-</form>
-
-<% console.log(encounter) %>
+    <div class="profile" id="show_encounter">
+        <div class="profile">
+            <h3>
+                <%= encounter.partnerName %>
+            </h3>
+        </div>  
+        <div>
+            <h4>Encounter Notes:</h4>
+            <p>
+             <%= encounter.note %>
+            </p>
+        </div>
+                  
+    </div>
+    
+    <form method="POST" action ="/encounters/<%=encounter.id%>/?_method=DELETE">
+        <input type="submit" value="delete">
+    </form>
+    <a href="/encounters">Go Back to All Encounters</a>
+</div>
