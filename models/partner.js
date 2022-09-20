@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
   partner.init({
     name: DataTypes.STRING,
     note: DataTypes.STRING,
-    userId: DataTypes.INTEGER
+    userId: DataTypes.INTEGER,
+    met: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'partner',

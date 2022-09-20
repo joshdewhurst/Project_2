@@ -44,7 +44,8 @@ router.post('/', async (req, res) => {
             await db.partner.create({
         name: req.body.name,
         note: req.body.note,
-        userId: res.locals.user.id
+        userId: res.locals.user.id,
+        met: req.body.met
     })
     .then((partner) => {
         res.redirect('/partners')
@@ -87,6 +88,7 @@ router.put('/:id', async (req, res) => {
         const changedPartner = await db.partner.update({
             name: req.body.name,
             note: req.body.note,
+            met: req.body.met,
         }, {where: {
             id: req.params.id
         }})
