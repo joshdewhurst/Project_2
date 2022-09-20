@@ -1,19 +1,22 @@
-<div>
+<div class="profile">
     <h1><%= partner.name %></h1>
 
-    <h2>Notes</h2>
-    <h3>
-     <%= partner.note %>
-    </h3>
-    <h3>
-        How did you meet them?
-        <br>
+    <div id="show_encounter">
+
+        <h2>Notes</h2>
+        <p>
+         <%= partner.note %>
+        </p>
+        <h3>
+            How did you meet them?
+        </h3>
         <p>
             <%= partner.met %>
         </p>
-    </h3>
-    
-    <form method="POST" action ="/partners/<%=partner.id%>/?_method=DELETE">
-        <input type="submit" value="delete">
-    </form>
+        
+        <form method="POST" action ="/partners/<%=partner.id%>/?_method=DELETE">
+            <input type="submit" value="delete">
+        </form>
+    </div>
+    <a class="link-dark" href="/partners">Back to All Partners</a>
 </div>

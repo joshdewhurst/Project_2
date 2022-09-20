@@ -1,7 +1,19 @@
-<form method="POST", action='/partners/<%= id %>/?_method=PUT'>
-    <label>Name</label>
-    <input type="text" name="name" value="<%= partner.name %>" required>
-    <label>Notes</label>
-    <input type="text" name="note" value="<%= partner.note %>" placeholder="Add a note to this partner">
-    <input type="submit">
-</form>
+<div class="profile">
+        <h2>Edit Partner</h2>
+        <div id="show_encounter">
+            <h4>Current Partner Info:</h4>
+            <p>
+               <%= partner.name %> <br> Note: <%= partner.note %> <br> How we met: <%= partner.met %>
+            <p>
+        <form method="POST", action='/partners/<%= id %>/?_method=PUT'>
+            <label>Name</label>
+            <input type="text" name="name" value="<%= partner.name %>" required>
+            <label>Notes</label>
+            <input type="text" name="note" value="<%= partner.note %>" placeholder="Edit your note for this partner">
+            <label>How did you meet?</label>
+            <input type="text" name="met" value="<%= partner.met %>" placeholder="Edit how you met">
+            <input type="submit">
+        </form>
+    </div>
+    <a class="link-dark" href="/partners">Go Back to All Partners</a>
+</div>

@@ -14,13 +14,13 @@
             <% partners.forEach(partner => { %>
               <tr>
                 <th scope="col">
-                  <a href="/partners/<%= partner.id %>"><%= partner.name %></a>
+                  <a class="link-dark" href="/partners/<%= partner.id %>"><%= partner.name %></a>
                 </th>
                 <th>
                   <p><%= partner.note %></p>
                 </th>
                 <th>
-                  <a href="/partners/edit/<%= partner.id %>"> Edit </a>
+                  <a class="link-dark" href="/partners/edit/<%= partner.id %>"> Edit </a>
                 </th>
               </tr>
         <%  } )}%>
@@ -28,5 +28,5 @@
     </table>
   </div>
   
-  <a href="./partners/new" class="btn btn-outline-dark">New Partner</a>
+  <a class="link-dark" href="./partners/new" class="btn btn-outline-dark">New Partner</a>
 </div>

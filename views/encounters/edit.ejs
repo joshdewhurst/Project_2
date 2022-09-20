@@ -23,8 +23,11 @@
             </div>
             <div>
                 <input type="submit">
+                <form method="POST" action ="/encounters/<%=encounter.id%>/?_method=DELETE">
+                    <input type="submit" value="delete">
+                </form>
             </div>
         </form>
     </div>
-    <a href="/encounters">Go Back to All Encounters</a>
+    <a class="link-dark" href="/encounters">Go Back to All Encounters</a>
 </div>

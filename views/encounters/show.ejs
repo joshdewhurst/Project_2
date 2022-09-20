@@ -34,8 +34,19 @@
                   
     </div>
     
-    <form method="POST" action ="/encounters/<%=encounter.id%>/?_method=DELETE">
-        <input type="submit" value="delete">
-    </form>
-    <a href="/encounters">Go Back to All Encounters</a>
+    <div>
+        <button type="button" class="btn btn-outline-dark link-dark">
+            <a class="link-dark" href="/encounters/edit/<%= encounter.id %>"> Edit </a>
+        </button>
+        <form method="POST" action ="/encounters/<%=encounter.id%>/?_method=DELETE">
+            <button type="button" class="btn btn-outline-dark link-dark">
+                <input type="submit" value="delete">
+            </button>
+        </form>
+    </div>
+    
+    <button type="button" class="btn btn-outline-dark link-dark">
+        <a class="link-dark" href="/encounters">Go Back to All Encounters</a>
+    </button>
+    
 </div>
