@@ -8,6 +8,7 @@ const syphilisUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?c
 const chlamGonoUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=gonorrhea`
 const hivUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=hiv`
 const talkUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=STD%20Testing`
+const birthcontrolUrl = `https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=28&keyword=birth%20control`
 
 
 
@@ -60,6 +61,26 @@ router.get('/letstalk', (req, res) => {
             data: response.data.Result.Resources.Resource[0].Sections.section[0].Content
         })
     })
+})
+
+router.get('/birthcontrol', (req,res) => {
+    axios.get(birthcontrolUrl)
+    .then ((response) => {
+        res.render('./sexualhealth/birthcontrol', {
+            dataPoint1: response.data.Result.Resources.Resource[0].Sections.section[0].Content,
+            dataPoint2: response.data.Result.Resources.Resource[0].Sections.section[1].Content,
+            dataPoint3: response.data.Result.Resources.Resource[0].Sections.section[2].Content,
+            dataPoint4: response.data.Result.Resources.Resource[0].Sections.section[3].Content,
+            dataPoint5: response.data.Result.Resources.Resource[0].Sections.section[4].Content,
+            dataPoint6: response.data.Result.Resources.Resource[0].Sections.section[5].Content,
+            dataPoint7: response.data.Result.Resources.Resource[0].Sections.section[6].Content,
+            dataPoint8: response.data.Result.Resources.Resource[0].Sections.section[7].Content,
+            dataPoint9: response.data.Result.Resources.Resource[0].Sections.section[8].Content,
+            dataPoint10: response.data.Result.Resources.Resource[0].Sections.section[9].Content,
+            dataPoint11: response.data.Result.Resources.Resource[0].Sections.section[10].Content,
+            dataPoint12: response.data.Result.Resources.Resource[0].Sections.section[11].Content,
+        })
+})
 })
 
 module.exports = router
