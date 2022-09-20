@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html land="en">
 <head>
+    <style>
+        * {
+            background-color: blanchedalmond;
+        }
+        .profile {
+            text-align: center;
+            display: block;
+        }
+    </style>
+
     <meta charset="UTF-8">
     <meta gttp-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +25,10 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                    <div class="navbar-nav">
                     <a href="/users/profile" class="nav-link active" aria-current="page" href="#">Profile</a>
-                    <a href='/users/logout' class="nav-link" href="#">Logout</a>
-                    <a href='/encounters' class="nav-link" href="#">Encounters</a>
-                    <a href='/partners' class="nav-link" href="#">Partners</a>
-                    </div>
+                    <a href='/users/logout' class="nav-link">Logout</a>
+                    <a href='/encounters' class="nav-link">Encounters</a>
+                    <a href='/partners' class="nav-link">Partners</a>
+                    <a href="/sexualhealth" class="nav-link">Sexual Health</a>
                 </div>
            <% } else { %>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -34,9 +44,7 @@
 
     <%- body %>
 
-    <div class="fixed-bottom">
-        <a href="/sexualhealth">Sexual Health FAQs</a>
-    </div>
+   
 
 </body>
 

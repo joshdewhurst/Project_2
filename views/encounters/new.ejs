@@ -12,10 +12,18 @@
     </div> 
     <div>
         <label for="partner">Partner</label>
-        <input type="text" id="partner" name="partnerId">
+        <select name="partner.name">
+            <% partner.forEach((partner) => { %>
+                <option value ="partner.name">
+                    <%= partner.name %>
+                </option>
+                <input type="hidden" id="note" name="partnerId" value="partner.id" >
+            <%  }) %>
+            <div>
+            </div> 
+          </select>
     </div> 
     <input type="submit">
 
 </form>
 
-<% console.log(partner) %>

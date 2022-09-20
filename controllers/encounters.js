@@ -36,7 +36,11 @@ router.get('/', async (req, res) => {
 // }})
 
 router.get('/new', (req,res)=> {
-    db.partner.findAll()
+    db.partner.findAll({
+        where: {
+            userId: res.locals.user.id
+        }, include: [db.user]
+    })
     .then(function(partner) {
         res.render('encounters/new.ejs', {
             partner: partner
@@ -54,7 +58,7 @@ router.post('/', async (req, res) => {
         await db.encounter.create({
         date: req.body.date,
         note: req.body.note,
-        partnerId: req.body.partnerId,
+        partnerId: req.body.partner.id,
         userId: res.locals.user.id
     })
     .then((encounter) => {

@@ -17,10 +17,12 @@ router.post('/', async (req, res) => {
 
         const [newUser, created] = await db.user.findOrCreate({
             where: {
-                email: req.body.email
+                email: req.body.email,
             }, 
             defaults: {
-                password: hashedPassword
+                password: hashedPassword,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName
             }
         })
 
@@ -43,7 +45,6 @@ router.post('/', async (req, res) => {
 //http://127.0.0.1:3000/users/login?message=Incorrect%20username%20or%20password
 // GET /users/login -- show a login form to the user
 router.get('/login', (req, res) => {
-    console.log(req.query)
     res.render('users/login.ejs', {
         // if the req.query.message exists, pass it is as the message, otherwise pass in null
         // ternary operator
@@ -58,7 +59,7 @@ router.post('/login', async (req, res) => {
         // look up the user in the db using the supplied email
         const user = await db.user.findOne({ 
             where: {
-                email: req.body.email
+                email: req.body.email,
             } 
         })
         const noLoginMessage = 'Incorrect username or password'
