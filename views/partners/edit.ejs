@@ -14,6 +14,9 @@
             <input type="text" name="met" value="<%= partner.met %>" placeholder="Edit how you met">
             <input type="submit">
         </form>
+        <form method="POST" action ="/partners/<%=partner.id%>/?_method=DELETE">
+            <input type="submit" value="delete">
+        </form>
     </div>
     <a class="link-dark" href="/partners">Go Back to All Partners</a>
 </div>

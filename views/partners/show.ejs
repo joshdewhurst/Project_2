@@ -13,10 +13,14 @@
         <p>
             <%= partner.met %>
         </p>
-        
-        <form method="POST" action ="/partners/<%=partner.id%>/?_method=DELETE">
-            <input type="submit" value="delete">
-        </form>
+        <div>
+            <form method="POST" action ="/partners/<%=partner.id%>/?_method=DELETE">
+                <input type="submit" value="delete">
+            </form>
+            <button type="button" class="btn btn-outline-dark link-dark">
+                <a class="link-dark" href="/partners/edit/<%= partner.id %>"> Edit </a>
+            </button>
+        </div>
     </div>
     <a class="link-dark" href="/partners">Back to All Partners</a>
 </div>
