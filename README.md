@@ -53,9 +53,9 @@ ___
  
  ___
  
- # Wire Frame
- 
- ![WireFrame](https://user-images.githubusercontent.com/108956371/189952088-fca97aa7-b94b-4c95-afeb-41ad57029347.jpg)
+ # Wire Frames
+ ![WireFrames Part 1](https://user-images.githubusercontent.com/108956371/191425752-3911895b-6edd-43c6-b472-6b3727a7674e.png)
+ ![Wireframes Part 2](https://user-images.githubusercontent.com/108956371/191425803-59b15017-cfff-4703-8764-50aafe301429.png)
 
  
  ___
