@@ -105,6 +105,11 @@ ___
 - [x] Style the pages to make them look aesthetically pleasing
 - [ ] Incorporate a seperate API for a more expansive look at sexual health topics
 - [x] Create a more complex note sextion to add additional optional information prompts for encounters/partners
- 
- 
+___
+# Approach taken
+
+#### It was crutial that I took time to plan out what I wanted to do in depth before even starting my code. I took time to think of my app, the routes, and what would be meaningful for a user to have access to for this type of application. I spent some time thinking of possible API's that would be compatible with my idea and started to comb through health.gov to find the nested information I would eventually use in my sexual health routes. Once I decided on an API, I started building all my routes per my planning document and started with the bare bones before expanding my models with mroe attributes, trying to style more clearly, and have the app appear more user friendly. I think I spent more time in developong the idea and the meaning of my app because that was what was most important to me: an app that has a purpose and that can be utalized by users.
+___
+# Post-Project Reflection
+#### I think I am happy with how my project turned out, but not fully satisfied with the result. I am not a styling wiz and I feel like although I did put time into styling my app, I don't think it has an interface that reflects my passion for the purpose of the app. I have some stretch goals I would like to implament soon, particularly adding a new API, I think that health.gov has good information to start, but I think for what I envisioned I should have used or searched more to find a better API that gave a more expansive response for sexual health topics. In additonal, I think I should have set better time parameters for myself and small goals. Because I was so excited about every element of my app, I felt that I jumped back and forth between tasks that led to me not being fully focused on one thing. I wish I knew CSS more to be able to give the user a better expereince, but I am nevertheless happy with the end result and proud that I completed this app all by myself!
  
