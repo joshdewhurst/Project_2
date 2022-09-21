@@ -1,5 +1,5 @@
 # Traxxxker
-## Have fun having fun
+## Have fun having fun.
 ### Traxxxker is your new best friend when it comes to documenting your sexual encounters and educating yourself on sexual health issues. 
 
 #### With an easy to use interface, a user is able to log new sexual encounters and new sexual partners. This will allow you to easily look back and see who you have been with and when you were with them. In the case of an STD exposure, a user is able to more easily notify who they need to notify and track when a possible exposure could have occured. We believe in educating our users on safer sex practices and removing the stigma behind sexually transmitted diseases. This is why our application connects with health.gov to provide infomation on common STDs, as well as other helpful articles within the sexual health sphere. Lets have fun having fun....together!
@@ -35,7 +35,14 @@ ___
  PUT | /partners/:id | Update | Updating a current partners information
  DELETE | /partners/:id | Delete | Deleting a specific partners data 
  GET | /sexualhealth | Read | Get a list of STDs/STIs
- GET | /sexualhealth/:id | READ | Get details for a specific STD/STI
+ GET | /sexualhealth/:id | Read | Get details for a specific STD/STI
+ GET | /users | Read | Show the homepage of the app
+ GET | /users/login | Read | Show the login page for an existing user
+ POST | /users/login | CREATE | Accept a payload of form data and use it to log a user in 
+ GET | /users/signup | Read | Show the signup page for a new user
+ POST | /users | Create | Creates a new user and prompts the user to home page to sign in
+ GET | /users/profile | Read | Get the logged in profile page for a user with the rest of the app features
+ GET | /users/logout | Read | logs a user out and takes them back to the app home page
  
  ___
  # User Stories
