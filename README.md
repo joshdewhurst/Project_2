@@ -1,4 +1,5 @@
-# Traxxxker <img src="https://i.postimg.cc/QdJ55x0X/logo.png" width="100">
+# Traxxxker 
+<img src="https://i.postimg.cc/QdJ55x0X/logo.png" width="200">
 
 ## Have fun having fun.
 ### Traxxxker is your new best friend when it comes to documenting your sexual encounters and educating yourself on sexual health issues. 
