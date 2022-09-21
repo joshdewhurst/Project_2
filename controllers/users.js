@@ -105,28 +105,5 @@ router.get('/profile', (req, res) => {
     }
 })
 
-// router.get('/settings', async (req, res) => {
-//     try{
-//         if (!res.locals.user) {
-//             res.redirect('/users/login')
-//         }
-//         else {
-//             const user = await db.findByPk(req.params,userId)
-//             const firstName = await db.findOne({
-//                 where: {
-//                     firstName: req.params.firstName
-//                 }
-//             })
-//             const lastName = await db.findOne({
-//                 where: {
-//                     lastName: req.params.lastName
-//                 }
-//             })
-//         }
-//     } catch (err) {
-//         console.log(err)
-//     }
-//     res.render('users/settings')
-// })
 
 module.exports = router
