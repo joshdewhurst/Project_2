@@ -1,10 +1,7 @@
-# Project_2 Pitch
+# Traxxxker
+## Have fun having fun
+### Traxxxker is your new best friend when it comes to documenting your sexual encounters and educating yourself on sexual health issues. With an easy to use interface, a user is able to log new sexual encounters and new sexual partners. This will allow you to easily look back and see who you have been with and when you were with them. In the case of an STD exposure, a user is able to more easily notify who they need to notify and track when a possible exposure could have occured. We believe in educating our users on safer sex practices and removing the stigma behind sexually transmitted diseases. This is why our application connects with health.gov to provide infomation on common STDs, as well as other helpful articles within the sexual health sphere. Lets have fun with having fun....together!
 
-## Sexual Health Tracking App
-### I am thinking of creating an app to track sexual health, possible exposures, and sexual partners. The app will load on a main page prompting log in authentication in order to authorize the use of the app. Once logged in, a monthly calendar will be the main display item. You will have the options to add an encounter, add a new partner, or request information on a STD/STI.
-1. The goal of the app is to have your sexual health in an easy to access app that stores information on when an encounter happened and with who in the case you have been exposed to a disease and need to inform people you have been with and be responsible and practice safer sex practices.
-2. Health.gov API to pull information about symptons, treatment, and information on STDs.
-3. [Health.gov API](https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers)
 ___
  # CRUD Table
  VERB | URL | Action | Notes
