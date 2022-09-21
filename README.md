@@ -1,5 +1,4 @@
-# Traxxxker ![Traxxxker-logos](https://user-images.githubusercontent.com/108956371/191430645-ad4df129-6cec-4623-86f4-6f64b19da0c5.jpeg)
-<img src="https://i.postimg.cc/QdJ55x0X/logo.png" width="50">
+# Traxxxker <img src="https://i.postimg.cc/QdJ55x0X/logo.png" width="100">
 
 ## Have fun having fun.
 ### Traxxxker is your new best friend when it comes to documenting your sexual encounters and educating yourself on sexual health issues. 
