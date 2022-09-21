@@ -20,7 +20,7 @@ ___
 * Run `nodemon` to start the application (or `npx nodemon` for local installations)
 ___
 
- # CRUD Table
+ # Encounter Table
  VERB | URL | Action | Notes
  ----| --- | ------- | -----
  GET | /encounters | Read | Get a list of all current encounters
@@ -30,6 +30,9 @@ ___
  GET | /encounters/edit/:id | Read | Get a form that allows you to edit a previously made encounter
  PUT | /encounters/:id | Update | Editing an encounter and posting the edits
  DELETE | /encounters/:id | Delete | Delete an encounter
+ 
+ # Partner Table
+ VERB | URL | Action | Notes
  GET | /partners | Read | Get a list of all current partners
  Get | /partners/new | Read | Showing a form to log a new partner
  POST | /partners | Create | Creating a new partner 
@@ -37,8 +40,14 @@ ___
  GET | /partners/edit/:id | Read | Show a form to edit partner information
  PUT | /partners/:id | Update | Updating a current partners information
  DELETE | /partners/:id | Delete | Deleting a specific partners data 
+ 
+ # Sexual Health
+ ERB | URL | Action | Notes
  GET | /sexualhealth | Read | Get a list of STDs/STIs
  GET | /sexualhealth/:id | Read | Get details for a specific STD/STI
+ 
+ # Users
+ ERB | URL | Action | Notes
  GET | /users | Read | Show the homepage of the app
  GET | /users/login | Read | Show the login page for an existing user
  POST | /users/login | CREATE | Accept a payload of form data and use it to log a user in 
