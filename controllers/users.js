@@ -53,7 +53,7 @@ router.get('/login', (req, res) => {
     })
 })
 
-// POST /users/login -- accept a payload of form data and use it log a user in 
+// POST /users/login -- accept a payload of form data and use it to log a user in 
 router.post('/login', async (req, res) => {
     try {
         // look up the user in the db using the supplied email
