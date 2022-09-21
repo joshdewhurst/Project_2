@@ -45,6 +45,14 @@ ___
  GET | /users/logout | Read | logs a user out and takes them back to the app home page
  
  ___
+ # API 
+ I used the health.gov API
+ ![Screen Shot 2022-09-20 at 11 05 26 PM](https://user-images.githubusercontent.com/108956371/191426890-fa934165-4ab1-4112-9e0d-c9996b44fa8b.png)
+![Screen Shot 2022-09-20 at 11 05 06 PM](https://user-images.githubusercontent.com/108956371/191426892-7751b3ff-c9d6-465f-9825-3e68264b1dc3.png)
+![Screen Shot 2022-09-20 at 11 04 57 PM](https://user-images.githubusercontent.com/108956371/191426894-07812d26-2ce0-4db0-9490-61576b7e1933.png)
+
+ 
+ ___
  # User Stories
  
  1. As a user you should be able to log new encounters and edit/delete them 
