@@ -48,10 +48,10 @@ ___
  # API 
  I used the health.gov API
  
- Defined URLs to access JSON data
+### Defined URLs to access JSON data
 ![Screen Shot 2022-09-20 at 11 05 26 PM](https://user-images.githubusercontent.com/108956371/191426890-fa934165-4ab1-4112-9e0d-c9996b44fa8b.png)
-
-Getting JSON data from the health.govAPI
+___
+### Getting JSON data from the health.govAPI
 ![JSON data](https://user-images.githubusercontent.com/108956371/191426894-07812d26-2ce0-4db0-9490-61576b7e1933.png)
 
  
