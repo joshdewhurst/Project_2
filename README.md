@@ -75,7 +75,24 @@ ___
 ![Entity Relation Diagram](https://user-images.githubusercontent.com/108956371/191420909-dd157aff-09cb-49aa-986b-a6b42e38e332.png)
 
 ___
+# Tech Used
 
+* Javascript
+* CSS
+* HTML
+* Node
+* Axios
+* Postgresql
+* Sequelize
+* Express
+* Bcrypt
+* Cookie-Parser
+* Crypto-JS
+* Dotenv
+* EJS
+* Express-EJS-Layouts
+* Method-Override
+___
 # MVP 
 1. Create Models for encounters, partners, and find an sexual health api
 2. Create all routes that run and direct the user around the app
