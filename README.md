@@ -33,6 +33,7 @@ ___
  
  # Partner Table
  VERB | URL | Action | Notes
+ ----| --- | ------- | -----
  GET | /partners | Read | Get a list of all current partners
  Get | /partners/new | Read | Showing a form to log a new partner
  POST | /partners | Create | Creating a new partner 
@@ -42,12 +43,14 @@ ___
  DELETE | /partners/:id | Delete | Deleting a specific partners data 
  
  # Sexual Health
- ERB | URL | Action | Notes
+ VERB | URL | Action | Notes
+ ----| --- | ------- | -----
  GET | /sexualhealth | Read | Get a list of STDs/STIs
  GET | /sexualhealth/:id | Read | Get details for a specific STD/STI
  
  # Users
- ERB | URL | Action | Notes
+ VERB | URL | Action | Notes
+ ----| --- | ------- | -----
  GET | /users | Read | Show the homepage of the app
  GET | /users/login | Read | Show the login page for an existing user
  POST | /users/login | CREATE | Accept a payload of form data and use it to log a user in 
