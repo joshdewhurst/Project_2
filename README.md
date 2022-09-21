@@ -7,6 +7,8 @@
 
 #### Give it a try!
 [Lets Get Traxxxking!](https://traxxxker-joshdewhurst.koyeb.app/)
+
+Shout out to Jason and Valerie for helping me work through some elements of my code, as well as Ye and April for being patient with me. 
 ___
 # Installation Instruction
 * Fork and clone this repository
