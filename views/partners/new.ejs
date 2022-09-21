@@ -1,19 +1,28 @@
+<div class="profile">
+
 <h1>New Partner</h1>
+<div id="show_encounter">
 
-<form action="/partners" method="POST">
+    <form class="row g-3" action="/partners" method="POST">
+        <div class="col-12">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="col-12">
+          <label for="note" class="form-label">Note</label>
+          <textarea type="text" class="form-control" id="note" name="note">
+            </textarea>
+        </div>
+        <div class="col-12">
+          <label for="met" class="form-label">How did you meet them?</label>
+          <textarea type="text" class="form-control" id="met" name="met">
+            </textarea>
+        </div>
+        <div class="col-12">
+            <input type="submit" class="btn btn-primary">
+        </div>
+      </form>
 
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-     </div>
-    <div>
-        <label for="note">Note:</label>
-        <input type="text" id="note" name="note">
-    </div> 
-    <div>
-        <label for="met">How did you meet them?</label>
-        <input type="text" id="met" name="met">
-    </div> 
-    <input type="submit">
+</div>
 
-</form>
+</div>

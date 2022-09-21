@@ -1,37 +1,44 @@
-<h1>New Encounter</h1>
-
-<form action="/encounters" method="POST">
-
-    <div>
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date" required>
-     </div>
-    <div>
-        <label for="note">Note:</label>
-        <input type="text" id="note" name="note">
-    </div> 
-    <div>
-        <label for="partnerName">Partner</label>
-        <select name="partnerName">
-            <% partners.forEach((partner) => { %>
-                <option>
-                    <%= partner.name %>
-                </option>
-           <% }) %>
-        </select>
-        <a href="../partners/new" class="link-dark">Create a New Partner</a>
+<div class="profile">
+    <h1>New Encounter</h1>
+    <div id="show_encounter">
+        <form class="row g-3" action="/encounters" method="POST">
+            <div class="col-md-6">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" class="form-control" id="date" name="date">
+            </div>
+            <div class="col-md-6">
+                <label for="partnerName" class="form-label">Partner</label>
+                <select id="partnerName" class="form-select" name="partnerName">
+                    <% partners.forEach((partner) => { %>
+                        <option>
+                            <%= partner.name %>
+                        </option>
+                   <% }) %>
+                </select>
+                <a href="../partners/new">Add a new partner</a>
+            </div>
+            <div class="col-12">
+              <label for="note" class="form-label">Notes: </label>
+              <textarea type="text" class="form-control" id="note" placeholder="any notes on the encounter?" name="note">
+                </textarea>
+            </div>
+            <div class="col-12">
+              <label for="protection" class="form-label">Did you use protection?</label>
+              <select id="protection" class="form-control" name="protection">
+              <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+            <div class="col-12">
+              <label for="penetration" class="form-label">Was there Penetration? What kind?</label>
+              <textarea type="text" class="form-control" id="penetration" name="penetration">
+                </textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Add New Encounter</button>
+            </div>
+          </form>
+    
     </div>
-    <div>
-        <label for="protection">Protection?</label>
-        <select name="protection">
-            <option>Yes</option>
-            <option>No</option>
-        </select>
-    </div>
-    <div>
-        <label for="penetration">If there was penetration, what type?</label>
-        <input type="text" id="penetration" name="penetration">
-    </div>
-    <input type="submit">
-
-</form>
+    
+</div>
