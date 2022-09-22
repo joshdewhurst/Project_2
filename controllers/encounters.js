@@ -11,6 +11,10 @@ router.get('/', async (req, res) => {
             res.redirect('/')
         } else {
             db.encounter.findAll({
+            //    when an encounter is made, display that encounter in ascending order
+                order: [
+                    ['date', 'ASC']
+                    ],
                 where: {
                     userId: res.locals.user.id,
                     
@@ -27,13 +31,6 @@ router.get('/', async (req, res) => {
     }
 })
 
-// Getting to the new encounter form
-// router.get('/new', (req, res) => {
-//     if (!res.locals.user) {
-//         res.redirect('/')
-//     } else {
-//         res.render('encounters/new.ejs')
-// }})
 
 router.get('/new', (req,res)=> {
     db.partner.findAll({
