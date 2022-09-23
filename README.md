@@ -11,13 +11,13 @@
 Shout out to Jason and Valerie for helping me work through some elements of my code, as well as Ye and April for being patient with me. 
 ___
 # Installation Instruction
-Fork and Clone repo to your local repository
-Run npm init -y to initialize npm
-Open the repo and navigate to package.json file and see a list of npm packages listed under dependencies
-Run npm install or npm i in the terminal to download of all required npm packages. node_modules should appear in the folder.
-Make sure node_modules and .env are in the gitignore file before committing to remote repository
-Run sequelize db:create to create the database in psql
-Run sequelize db:migrate to migrate the models
+* Fork and Clone repo to your local repository
+* Run npm init -y to initialize npm
+* Open the repo and navigate to package.json file and see a list of npm packages listed under dependencies
+* Run npm install or npm i in the terminal to download of all required npm packages. node_modules should appear in the folder.
+* Make sure node_modules and .env are in the gitignore file before committing to remote repository
+* Run sequelize db:create to create the database in psql
+* Run sequelize db:migrate to migrate the models
 ___
 
  # Encounter Table
