@@ -6,7 +6,7 @@
 #### With an easy to use interface, a user is able to log new sexual encounters and new sexual partners. This will allow you to easily look back and see who you have been with and when you were with them. In the case of an STD exposure, a user is able to more easily notify who they need to notify and track when a possible exposure could have occured. We believe in educating our users on safer sex practices and removing the stigma behind sexually transmitted diseases. This is why our application connects with health.gov to provide infomation on common STDs, as well as other helpful articles within the sexual health sphere. Lets have fun having fun....together!
 
 #### Give it a try!
-[Lets Get Traxxxking!](https://traxxxker-joshdewhurst.koyeb.app/)
+[Lets Get Traxxxking!](https://traxxxker.fly.dev/)
 
 Shout out to Jason and Valerie for helping me work through some elements of my code, as well as Ye and April for being patient with me. 
 ___
