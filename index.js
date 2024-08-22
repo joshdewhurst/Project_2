@@ -46,7 +46,7 @@ app.use(async (req, res, next) => {
 // Route definitions
 app.get('/', (req, res) => {
     console.log('the currently logged in user is:', res.locals.user)
-    res.render('home.ejs')
+    res.render('users/home.ejs')
 })
 
 // Controllers
@@ -63,3 +63,4 @@ app.use((err, req, res, next) => {
 
 // Listen on a port
 app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`))
+
